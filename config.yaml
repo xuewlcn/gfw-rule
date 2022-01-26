@@ -249,7 +249,7 @@ rule-providers:
   Google:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Google/Google.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Google/Google.yaml"
     path: ./ruleset/Google.yaml
     interval: 86400
     
