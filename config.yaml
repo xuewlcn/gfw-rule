@@ -246,11 +246,11 @@ rule-providers:
     path: ./ruleset/BiliBili.yaml
     interval: 86400
 
-  Google:
+  google:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Google/Google.yaml"
-    path: ./ruleset/Google.yaml
+    path: ./ruleset/google.yaml
     interval: 86400
     
 rules:
@@ -261,7 +261,7 @@ rules:
   - RULE-SET,youtube,🎬Youtube
   - RULE-SET,Microsoft,💻微软服务
   - RULE-SET,BiliBili,🎬哔哩哔哩
-  - RULE-SET,Google,🛠谷歌服务
+  - RULE-SET,google,🛠谷歌服务
   - RULE-SET,global,🔰国外流量
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
