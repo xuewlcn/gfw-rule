@@ -274,6 +274,7 @@ rules:
 
 http:
     rewrite:
+      - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
       - ^https:\/\/(www|cn)\.pornhub\.com\/_xa\/ads.* - reject
       - ^https:\/\/.*\.bebi\.com\/.* - reject
       - ^https:\/\/api-ks\.wtzw\.com\/api\/v(1|2)\/(float-adv|init-adv|reader-adv) - reject
