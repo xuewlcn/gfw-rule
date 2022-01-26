@@ -172,6 +172,18 @@ proxy-groups:
       - ♻️自动选择
       - 🚀直接连接  
   -
+    name: 🛠谷歌服务
+    type: select
+    use:
+      - sbcnnet
+      - Jsnzkpg
+      - mkkhack
+      - ShareCentre
+    proxies:
+      - 🔰国外流量
+      - ♻️自动选择
+      - 🚀直接连接
+  -
     name: ⚓️其他流量
     type: select
     proxies:
@@ -232,8 +244,15 @@ rule-providers:
     behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/BiliBili/BiliBili.yaml"
     path: ./ruleset/BiliBili.yaml
-    interval: 86400  
+    interval: 86400
 
+  Google:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Google/Google.yaml"
+    path: ./ruleset/Google.yaml
+    interval: 86400
+    
 rules:
   # Clash Premium 内核的规则集（RULE-SET）https://github.com/Loyalsoldier/clash-rules
   - RULE-SET,reject,REJECT
@@ -242,6 +261,7 @@ rules:
   - RULE-SET,youtube,🎬Youtube
   - RULE-SET,Microsoft,💻微软服务
   - RULE-SET,BiliBili,🎬哔哩哔哩
+  - RULE-SET,Google,🛠谷歌服务
   - RULE-SET,global,🔰国外流量
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
@@ -251,3 +271,9 @@ rules:
   - DOMAIN-SUFFIX,safepal.io,⚓️其他流量
   - DOMAIN-SUFFIX,okx.com,⚓️其他流量
   - MATCH,DIRECT
+
+http:
+    rewrite:
+    - ^http://g\.cn http://www.google.com header # 重写请求头的域名
+    - ^https?://www\.google\.cn https://www.google.com 302 # 直接返回一个 302 重定向的响应
+    - ^https?://ad\.example - reject # 拒绝请求
