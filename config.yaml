@@ -285,7 +285,7 @@ http:
     - ^https:\/\/msg\.umengcloud\.com\/admsg\/ - reject
     - ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php.*ads&c=ad.* - reject
     - ^https:\/\/www\.dililitv\.com\/wp-author\/tga\/.*ad=.* - reject
-    - ^https?:\/\/(101\.201\.175\.228|182\.92\.251\.113)\/brand\/search\/v1\.json - reject-dict
+    - ^https?:\/\/(101\.201\.175\.228|182\.92\.251\.113)\/brand\/search\/v1\.json - reject
     - ^https?:\/\/(\d{1,3}\.){3}\d{1,3}/(variety|vlive\.qqvideo)\.tc\.qq\.com/ - reject
     - ^https?:\/\/(a?d|sax)\d.sina.com - reject
     - ^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
