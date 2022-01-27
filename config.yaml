@@ -245,7 +245,7 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/BiliBili/BiliBili.yaml"
     path: ./ruleset/BiliBili.yaml
     interval: 86400
-
+    
   Google:
     type: http
     behavior: classical
@@ -263,9 +263,6 @@ rules:
   - RULE-SET,BiliBili,🎬哔哩哔哩
   - RULE-SET,Google,🛠谷歌服务
   - RULE-SET,Proxy,🔰国外流量
-  - DOMAIN-SUFFIX,nfcloud.one,⚓️其他流量
-  - DOMAIN-SUFFIX,v2rayssr.com,⚓️其他流量
-  - DOMAIN-SUFFIX,mirror.xyz,⚓️其他流量
   - DOMAIN-SUFFIX,safepal.io,⚓️其他流量
   - DOMAIN-SUFFIX,okx.com,⚓️其他流量
   - MATCH,DIRECT
