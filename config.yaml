@@ -258,7 +258,7 @@ rules:
   - RULE-SET,Advertising,REJECT
   - RULE-SET,Apple,🍎苹果服务
   - RULE-SET,Telegram,✈️Telegram
-  - RULE-SET,Youtube,🎬Youtube
+  - RULE-SET,YouTube,🎬Youtube
   - RULE-SET,Microsoft,💻微软服务
   - RULE-SET,BiliBili,🎬哔哩哔哩
   - RULE-SET,Google,🛠谷歌服务
