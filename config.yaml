@@ -55,7 +55,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  # https://raw.githubusercontent.com/linke5/free-/74516efd3c87c2325c6ef302366070a494a46bc1/Free-new.md
+  # https://raw.githubusercontent.com/linke5/free-/main/free-new.md
   ShareCentre:
     type: http
     path: ./profiles/proxies/ShareCentre.yaml
@@ -66,6 +66,17 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
+  # https://raw.gitfast.tk/ThekingMX1998/free-v2ray-code/master/Subscription/Clash/GreenFishYYDS
+  ThekingMX1998:
+    type: http
+    path: ./profiles/proxies/ShareCentre.yaml
+    url: https://v1.mk/OsRIE8N
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      
 
 proxy-groups:
   - 
@@ -76,6 +87,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - DIRECT
       - ♻️自动选择
@@ -88,6 +100,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
   -
     name: 🍎苹果服务
     type: select
@@ -96,6 +109,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -108,6 +122,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -120,6 +135,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -131,6 +147,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -143,6 +160,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -155,6 +173,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -167,6 +186,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -179,6 +199,7 @@ proxy-groups:
       - Jsnzkpg
       - mkkhack
       - ShareCentre
+      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
