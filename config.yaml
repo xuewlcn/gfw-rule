@@ -38,7 +38,7 @@ proxy-providers:
   Jsnzkpg:
     type: http
     path: ./profiles/proxies/Jsnzkpg.yaml
-    url: https://v1.mk/2oVyOJF
+    url: https://v1.mk/wCC29fb
     interval: 3600
     health-check:
       enable: true
