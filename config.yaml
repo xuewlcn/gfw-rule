@@ -270,6 +270,13 @@ rule-providers:
     path: ./ruleset/YouTube.yaml
     interval: 86400
 
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Netflix/Netflix.yaml"
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+
   Microsoft:
     type: http
     behavior: classical
@@ -297,6 +304,7 @@ rules:
   - RULE-SET,Apple,🍎苹果服务
   - RULE-SET,Telegram,✈️Telegram
   - RULE-SET,YouTube,🎬Youtube
+  - RULE-SET,Netflix,🎬Netflix
   - RULE-SET,Microsoft,💻微软服务
   - RULE-SET,BiliBili,🎬哔哩哔哩
   - RULE-SET,Google,🛠谷歌服务
