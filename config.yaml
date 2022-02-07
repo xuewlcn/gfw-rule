@@ -76,7 +76,18 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-      
+  # https://sub.nfol.xyz/link/fxxxQhQrf1ROvFtY?clash=2
+  nfcloud:
+    type: http
+    path: ./profiles/proxies/nfcloud.yaml
+    url: https://v1.mk/pvl9cc7
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+
 
 proxy-groups:
   - 
@@ -88,6 +99,7 @@ proxy-groups:
       - mkkhack
       - ShareCentre
       - ThekingMX1998
+      - nfcloud
     proxies:
       - DIRECT
       - ♻️自动选择
@@ -97,15 +109,13 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 3600
     use:
-      - Jsnzkpg
-      - mkkhack
-      - ShareCentre
-      - ThekingMX1998
+      - nfcloud
   -
     name: 🍎苹果服务
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
@@ -119,6 +129,7 @@ proxy-groups:
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
@@ -132,6 +143,7 @@ proxy-groups:
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
@@ -144,6 +156,7 @@ proxy-groups:
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
@@ -157,6 +170,7 @@ proxy-groups:
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
@@ -170,6 +184,7 @@ proxy-groups:
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
@@ -183,6 +198,7 @@ proxy-groups:
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
@@ -196,6 +212,7 @@ proxy-groups:
     type: select
     use:
       - sbcnnet
+      - nfcloud
       - Jsnzkpg
       - mkkhack
       - ShareCentre
