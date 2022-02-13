@@ -44,17 +44,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-
-  # https://mkkhack.pw/Clash
-  mkkhack:
-    type: http
-    path: ./profiles/proxies/mkkhack.yaml
-    url: https://v1.mk/OHXseyj
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
   # https://raw.githubusercontent.com/linke5/free-/main/free-new.md
   ShareCentre:
     type: http
@@ -96,7 +85,6 @@ proxy-groups:
     use:
       - sbcnnet
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
       - nfcloud
@@ -117,7 +105,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -131,7 +118,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -145,7 +131,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -158,7 +143,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -172,7 +156,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -186,7 +169,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -200,7 +182,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -214,7 +195,6 @@ proxy-groups:
       - sbcnnet
       - nfcloud
       - Jsnzkpg
-      - mkkhack
       - ShareCentre
       - ThekingMX1998
     proxies:
