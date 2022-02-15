@@ -294,6 +294,9 @@ rules:
   - MATCH,DIRECT
 
 http:
+  mitm:
+    - g.cn
+    - "*.google.cn"
   rewrite:
     - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
     - ^https:\/\/(www|cn)\.pornhub\.com\/_xa\/ads.* - reject
