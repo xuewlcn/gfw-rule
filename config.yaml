@@ -24,11 +24,11 @@ dns:
       - 240.0.0.0/4
 
 proxy-providers:
-  # https://url.sbcnnet.top/link/fNHtYFEu459Xbzxq?clash=1
-  sbcnnet:
+  # https://sub.nfol.xyz/link/fxxxQhQrf1ROvFtY?clash=2
+  nfcloud:
     type: http
-    path: ./profiles/proxies/sbcnnet.yaml
-    url: https://v1.mk/0vKu2us
+    path: ./profiles/proxies/nfcloud.yaml
+    url: https://v1.mk/pvl9cc7
     interval: 3600
     health-check:
       enable: true
@@ -65,16 +65,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  # https://sub.nfol.xyz/link/fxxxQhQrf1ROvFtY?clash=2
-  nfcloud:
-    type: http
-    path: ./profiles/proxies/nfcloud.yaml
-    url: https://v1.mk/pvl9cc7
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+
 
 
 
@@ -83,7 +74,6 @@ proxy-groups:
     name: 🔰国外流量
     type: select
     use:
-      - sbcnnet
       - Jsnzkpg
       - ShareCentre
       - ThekingMX1998
@@ -102,7 +92,6 @@ proxy-groups:
     name: 🍎苹果服务
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
@@ -115,7 +104,6 @@ proxy-groups:
     name: 💻微软服务
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
@@ -128,7 +116,6 @@ proxy-groups:
     name: ✈️Telegram
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
@@ -140,7 +127,6 @@ proxy-groups:
     name: 🎬Youtube
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
@@ -153,7 +139,6 @@ proxy-groups:
     name: 🎬Netflix
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
@@ -166,7 +151,6 @@ proxy-groups:
     name: 🎬哔哩哔哩
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
@@ -179,7 +163,6 @@ proxy-groups:
     name: 🎬国外媒体
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
@@ -192,7 +175,6 @@ proxy-groups:
     name: 🛠谷歌服务
     type: select
     use:
-      - sbcnnet
       - nfcloud
       - Jsnzkpg
       - ShareCentre
