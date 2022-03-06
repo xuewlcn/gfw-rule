@@ -24,11 +24,10 @@ dns:
       - 240.0.0.0/4
 
 proxy-providers:
-  # https://sub.nfol.xyz/link/fxxxQhQrf1ROvFtY?clash=2
   nfcloud:
     type: http
     path: ./profiles/proxies/nfcloud.yaml
-    url: https://v1.mk/pvl9cc7
+    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.nfol.xyz%2Flink%2FJ1RQxeF5cPUU8QLp%3Fclash%3D2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false&new_name=true
     interval: 3600
     health-check:
       enable: true
