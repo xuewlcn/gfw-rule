@@ -32,12 +32,12 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
-  # https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg
-  Jsnzkpg:
+      interval: 300  
+  #https://openit.ml/Clash.yaml    
+  openit:
     type: http
-    path: ./profiles/proxies/Jsnzkpg.yaml
-    url: https://v1.mk/wCC29fb
+    path: ./profiles/proxies/nfcloud.yaml
+    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fopenit.ml%2FClash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false&new_name=true
     interval: 3600
     health-check:
       enable: true
@@ -64,6 +64,8 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      
+      
 
 
 
@@ -73,7 +75,7 @@ proxy-groups:
     name: 🔰国外流量
     type: select
     use:
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
       - nfcloud
@@ -92,7 +94,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -104,7 +106,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -116,7 +118,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -127,7 +129,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -139,7 +141,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -151,7 +153,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -163,7 +165,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
@@ -175,7 +177,7 @@ proxy-groups:
     type: select
     use:
       - nfcloud
-      - Jsnzkpg
+      - openit
       - ShareCentre
       - ThekingMX1998
     proxies:
