@@ -36,49 +36,21 @@ proxy-providers:
   #https://openit.ml/Clash.yaml    
   openit:
     type: http
-    path: ./profiles/proxies/nfcloud.yaml
+    path: ./profiles/proxies/openit.yaml
     url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fopenit.ml%2FClash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false&new_name=true
     interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  # https://raw.githubusercontent.com/linke5/free-/main/free-new.md
-  ShareCentre:
-    type: http
-    path: ./profiles/proxies/ShareCentre.yaml
-    url: https://v1.mk/8FqvePi
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
-  # https://raw.gitfast.tk/ThekingMX1998/free-v2ray-code/master/Subscription/Clash/GreenFishYYDS
-  ThekingMX1998:
-    type: http
-    path: ./profiles/proxies/ShareCentre.yaml
-    url: https://v1.mk/OsRIE8N
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-      
-      
-
-
-
 
 proxy-groups:
   - 
     name: 🔰国外流量
     type: select
     use:
-      - openit
-      - ShareCentre
-      - ThekingMX1998
       - nfcloud
+      - openit
     proxies:
       - DIRECT
       - ♻️自动选择
@@ -95,8 +67,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -107,8 +77,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -119,8 +87,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -130,8 +96,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -142,8 +106,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -154,8 +116,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -166,8 +126,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -178,8 +136,6 @@ proxy-groups:
     use:
       - nfcloud
       - openit
-      - ShareCentre
-      - ThekingMX1998
     proxies:
       - 🔰国外流量
       - ♻️自动选择
