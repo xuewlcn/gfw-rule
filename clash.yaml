@@ -23,11 +23,25 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 
+http:
+  mitm:
+    - sub.store
+  script:
+    - match: ^https?:\/\/sub\.store
+      name: sub-store
+      type: request
+      require-body: true
+      timeout: 120
+script-providers:
+  sub-store:
+    url: https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js
+    interval: 86400
+
 proxy-providers:
   nfcloud:
     type: http
     path: ./profiles/proxies/nfcloud.yaml
-    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.nfol.xyz%2Flink%2FJ1RQxeF5cPUU8QLp%3Fclash%3D2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false&new_name=true
+    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.nfol.xyz%2Flink%2F2Hpoi11WFqNyRnmD%3Fclash%3D2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false&new_name=true
     interval: 3600
     health-check:
       enable: true
@@ -43,12 +57,24 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+  #https://openit.ml/Clash.yaml    
+  justmysocks:
+    type: http
+    path: ./profiles/proxies/justmysocks.yaml
+    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fjmssub.net%2Fmembers%2Fgetsub.php%3Fservice%3D511879%26id%3D6c5a7b0f-f81c-4c07-8323-9e91990ddee2%26usedomains%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false&new_name=true
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
 
 proxy-groups:
   - 
     name: 🔰国外流量
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -60,11 +86,13 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 3600
     use:
+      - justmysocks
       - nfcloud
   -
     name: 🍎苹果服务
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -75,6 +103,7 @@ proxy-groups:
     name: 💻微软服务
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -85,6 +114,7 @@ proxy-groups:
     name: ✈️Telegram
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -94,6 +124,7 @@ proxy-groups:
     name: 🎬Youtube
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -104,6 +135,7 @@ proxy-groups:
     name: 🎬Netflix
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -114,6 +146,7 @@ proxy-groups:
     name: 🎬哔哩哔哩
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -124,6 +157,7 @@ proxy-groups:
     name: 🎬国外媒体
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -134,6 +168,7 @@ proxy-groups:
     name: 🛠谷歌服务
     type: select
     use:
+      - justmysocks
       - nfcloud
       - openit
     proxies:
@@ -143,6 +178,10 @@ proxy-groups:
   -
     name: ⚓️其他流量
     type: select
+    use:
+      - justmysocks
+      - nfcloud
+      - openit
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -161,12 +200,12 @@ rule-providers:
     path: ./ruleset/Proxy_Domain.yaml
     interval: 86400
 
-  Advertising:
-    type: http
-    behavior: domain
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml"
-    path: ./ruleset/Advertising_Domain.yaml
-    interval: 86400
+#  Advertising:
+#    type: http
+#    behavior: domain
+#    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml"
+#    path: ./ruleset/Advertising_Domain.yaml
+#    interval: 86400
 
   Apple:
     type: http
@@ -218,8 +257,18 @@ rule-providers:
     interval: 86400
     
 rules:
-  # Clash Premium 内核的规则集（RULE-SET）https://github.com/Loyalsoldier/clash-rules
-  - RULE-SET,Advertising,REJECT
+  # 自定义规则优先
+  - IP-CIDR,93.95.226.151/32,⚓️其他流量
+  - IP-CIDR,120.29.217.52/32,⚓️其他流量
+  - IP-CIDR,185.175.58.104/32,⚓️其他流量
+  - DOMAIN-SUFFIX,safepal.io,⚓️其他流量
+  - DOMAIN-SUFFIX,isafepal.com,⚓️其他流量
+  - DOMAIN-SUFFIX,2047.one,⚓️其他流量
+  - DOMAIN-SUFFIX,okx.com,⚓️其他流量
+  - DOMAIN-SUFFIX,nfcloud.one,⚓️其他流量  
+  - DOMAIN-SUFFIX,1lib.domains,⚓️其他流量
+
+  # 下面的远程规则
   - RULE-SET,Apple,🍎苹果服务
   - RULE-SET,Telegram,✈️Telegram
   - RULE-SET,YouTube,🎬Youtube
@@ -228,8 +277,4 @@ rules:
   - RULE-SET,BiliBili,🎬哔哩哔哩
   - RULE-SET,Google,🛠谷歌服务
   - RULE-SET,Proxy,🔰国外流量
-  - DOMAIN-SUFFIX,safepal.io,⚓️其他流量
-  - DOMAIN-SUFFIX,isafepal.com,⚓️其他流量
-  - DOMAIN-SUFFIX,2047.one,⚓️其他流量
-  - DOMAIN-SUFFIX,okx.com,⚓️其他流量
   - MATCH,DIRECT
