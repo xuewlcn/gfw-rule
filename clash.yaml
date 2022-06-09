@@ -165,7 +165,7 @@ rule-providers:
   Customize:
     type: http
     behavior: classical
-    url: "https://ghproxy.com/https://github.com/xuewlcn/gfw-rule/blob/main/rule/clash/customize.yaml"
+    url: "https://ghproxy.com/https://github.com/xuewlcn/gfw-rule/blob/main/rule/customize.yaml"
     path: "./ruleset/Customize.yaml"
     interval: 86400
   Apple:
