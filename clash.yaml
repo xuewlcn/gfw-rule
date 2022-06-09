@@ -31,7 +31,7 @@ dns:
     - '*.battlenet.com'
     - '*.blzstatic.cn'
     - '*.battle.net'
-
+# 本配置文件为自用，采用 Clash for Windows 进行 diff 合并
 proxies:
 proxy-providers:
 
