@@ -260,6 +260,7 @@ rules:
   - "RULE-SET,TikTok,🎬国外媒体"
   - "RULE-SET,Twitter,🔰国外流量"
   - "RULE-SET,PayPal,🔰国外流量"
+  - "RULE-SET,Proxy,🔰国外流量"
   - "RULE-SET,Proxy_Domain,🔰国外流量"
   - "RULE-SET,Lan,DIRECT"
   - "MATCH,DIRECT"
