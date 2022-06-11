@@ -41,7 +41,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - DIRECT
@@ -54,7 +53,6 @@ proxy-groups:
     interval: 3600
     use:
       - justmysocks
-      - nfcloud
     proxies:
       - 日本-自建搬瓦工
   -
@@ -62,7 +60,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -73,7 +70,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -84,7 +80,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -94,7 +89,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -105,7 +99,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -116,7 +109,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -127,7 +119,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -138,7 +129,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
@@ -149,7 +139,6 @@ proxy-groups:
     type: select
     use:
       - justmysocks
-      - nfcloud
       - openit
     proxies:
       - 🔰国外流量
