@@ -31,7 +31,7 @@ dns:
     - '*.battlenet.com'
     - '*.blzstatic.cn'
     - '*.battle.net'
-# 本配置文件为自用，采用 Clash for Windows 进行 diff 合并
+
 proxies:
 proxy-providers:
 
@@ -40,8 +40,7 @@ proxy-groups:
     name: 🔰国外流量
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - DIRECT
       - 日本-自建搬瓦工
@@ -52,15 +51,14 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 3600
     use:
-      - justmysocks
+      - dlercloud
     proxies:
       - 日本-自建搬瓦工
   -
     name: 🍎苹果服务
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -69,8 +67,7 @@ proxy-groups:
     name: 💻微软服务
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -79,8 +76,7 @@ proxy-groups:
     name: ✈️Telegram
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -88,8 +84,7 @@ proxy-groups:
     name: 🎬Youtube
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -98,8 +93,7 @@ proxy-groups:
     name: 🎬Netflix
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -108,8 +102,7 @@ proxy-groups:
     name: 🎬哔哩哔哩
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -118,8 +111,7 @@ proxy-groups:
     name: 🎬国外媒体
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -128,8 +120,7 @@ proxy-groups:
     name: 🛠谷歌服务
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
@@ -138,8 +129,7 @@ proxy-groups:
     name: ⚓️其他流量
     type: select
     use:
-      - justmysocks
-      - openit
+      - dlercloud
     proxies:
       - 🔰国外流量
       - ♻️自动选择
