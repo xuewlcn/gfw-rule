@@ -43,7 +43,7 @@ proxy-groups:
       - dlercloud
     proxies:
       - DIRECT
-      - 日本-自建搬瓦工
+      - 自建节点
       - ♻️自动选择
   - 
     name: ♻️自动选择
@@ -53,7 +53,7 @@ proxy-groups:
     use:
       - dlercloud
     proxies:
-      - 日本-自建搬瓦工
+      - 自建节点
   -
     name: 🍎苹果服务
     type: select
