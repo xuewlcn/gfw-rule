@@ -2,9 +2,9 @@ payload:
   - DOMAIN-SUFFIX,safepal.io
   - DOMAIN-SUFFIX,isafepal.com
   - DOMAIN-SUFFIX,2047.one
-  - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,nfcloud.one
   - DOMAIN-SUFFIX,1lib.domains
   - DOMAIN-SUFFIX,boum.org
   - DOMAIN-SUFFIX,hcaptcha.com
   - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,safepal.com
