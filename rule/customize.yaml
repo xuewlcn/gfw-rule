@@ -8,3 +8,4 @@ payload:
   - DOMAIN-SUFFIX,hcaptcha.com
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,safepal.com
+  - DOMAIN-SUFFIX,hostcli.com
