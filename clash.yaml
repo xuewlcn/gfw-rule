@@ -1,0 +1,212 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 0.0.0.0:9090
+secret: ""
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 223.5.5.5
+    - 8.8.8.8
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localhost"
+    - localhost.ptlogin2.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
+proxies:
+  - name: 自建节点
+    type: ss
+    server: 108.166.195.189
+    port: 18390
+    password: mYhRnacC2w25
+    cipher: aes-256-cfb
+proxy-providers:
+  dlercloud:
+    type: http
+    path: ./profiles/proxies/dlercloud.yaml
+    url: https://gist.electricoh.com/FreeProxies
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+proxy-groups:
+  - name: 🔰国外流量
+    type: select
+    use:
+      - dlercloud
+    proxies:
+      - DIRECT
+      - 自建节点
+      - ♻️自动选择
+  - name: ♻️自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - dlercloud
+    proxies:
+      - 自建节点
+  - name: 🍎苹果服务
+    type: select
+    use:
+      - dlercloud
+    proxies:
+      - 🔰国外流量
+      - ♻️自动选择
+      - 🚀直接连接
+  - name: 💻微软服务
+    type: select
+    use:
+      - dlercloud
+    proxies:
+      - 🔰国外流量
+      - ♻️自动选择
+      - 🚀直接连接
+  - name: ✈️Telegram
+    type: select
+    use:
+      - dlercloud
+    proxies:
+      - 🔰国外流量
+      - ♻️自动选择
+  - name: 🎬国外媒体
+    type: select
+    use:
+      - dlercloud
+    proxies:
+      - 🔰国外流量
+      - ♻️自动选择
+      - 🚀直接连接
+  - name: 🛠谷歌服务
+    type: select
+    use:
+      - dlercloud
+    proxies:
+      - 🔰国外流量
+      - ♻️自动选择
+      - 🚀直接连接
+  - name: ⚓️其他流量
+    type: select
+    use:
+      - dlercloud
+    proxies:
+      - 🔰国外流量
+      - ♻️自动选择
+      - 🚀直接连接
+  - name: 🚀直接连接
+    type: select
+    proxies:
+      - DIRECT
+rule-providers:
+  Direct:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/xuewlcn/gfw-rule/main/rule/direct.yaml
+    path: ./ruleset/Direct.yaml
+    interval: 86400
+  Customize:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/xuewlcn/gfw-rule/main/rule/customize.yaml
+    path: ./ruleset/Customize.yaml
+    interval: 86400
+  Crypto:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/xuewlcn/gfw-rule/main/rule/Crypto/Crypto.yaml
+    path: ./ruleset/Crypto.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: domain
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Domain.yaml
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    path: ./ruleset/Google.yaml
+    interval: 86400
+  GlobalMedia:
+    type: http
+    behavior: domain
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.yaml
+    path: ./ruleset/GlobalMedia.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+  Twitter:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+    path: ./ruleset/Twitter.yaml
+    interval: 86400
+  PayPal:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml
+    path: ./ruleset/PayPal.yaml
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml
+    path: ./ruleset/Proxy.yaml
+    interval: 86400    
+  Proxy_Domain:
+    type: http
+    behavior: domain
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml
+    path: ./ruleset/Proxy_Domain.yaml
+    interval: 86400
+  Lan:
+    type: http
+    behavior: classical
+    url: https://raw.electricoh.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
+    path: ./ruleset/Lan.yaml
+    interval: 86400
+rules:
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Customize,⚓️其他流量
+  - RULE-SET,Crypto,🔰国外流量
+  - RULE-SET,Apple,🍎苹果服务
+  - RULE-SET,Microsoft,💻微软服务
+  - RULE-SET,Google,🛠谷歌服务
+  - RULE-SET,Telegram,✈️Telegram
+  - RULE-SET,GlobalMedia,🎬国外媒体
+  - RULE-SET,Twitter,🔰国外流量
+  - RULE-SET,PayPal,🔰国外流量
+  - RULE-SET,Proxy_Domain,🔰国外流量
+  - RULE-SET,Proxy,🔰国外流量
+  - RULE-SET,Lan,DIRECT
+  - MATCH,DIRECT
