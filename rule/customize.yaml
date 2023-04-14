@@ -10,3 +10,4 @@ payload:
   - DOMAIN-SUFFIX,safepal.com
   - DOMAIN-SUFFIX,hostcli.com
   - DOMAIN-SUFFIX,telghub.com
+  - IP-CIDR,108.166.195.189/32
